@@ -3,14 +3,7 @@
 $toto = true;
 ?>
 <html lang="en">
-    heyaa
-     is this working?
-     test5
-     cmonnn
-     sdfsdf
-     slimshaddyyyyy#
-     sdfsdgdsfgdfg
-     sdfgsdfgfnooo
+    
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
