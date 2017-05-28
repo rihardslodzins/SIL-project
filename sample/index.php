@@ -1,1 +1,3 @@
-hello its working
+<?php
+
+?>
