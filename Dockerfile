@@ -23,6 +23,7 @@ RUN mkdir /opt/lampp/apache2/conf.d && \
 # This is convenient because it doesn't interfere with xampp, phpmyadmin or other tools in /opt/lampp/htdocs
 RUN mkdir /www
 RUN ln -s /www /opt/lampp/htdocs/
+ADD code/ /www
 
 # SSH server
 RUN apt-get install -y -q supervisor openssh-server
