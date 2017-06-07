@@ -1,6 +1,6 @@
 <?php
 function showAllUnis(){
-                $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+                $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
             $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             $db->exec("SET NAMES 'utf8'");
             $results = $db->query("SELECT * FROM uni");
@@ -24,7 +24,7 @@ function showAllUnis(){
 function listUnis(){
                     $event_id = $_GET['id'];
                   try {
-                    $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  
@@ -55,7 +55,7 @@ function showDetailedUni(){
                 
                  $uni_id = $_GET['id'];
                   try {
-                    $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  

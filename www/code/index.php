@@ -90,7 +90,7 @@
     </div>
 </div>
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <a href="rihardslodzins@gmail.com">info@studyinlatvia.com</a>
 </footer>
 </body>
 </html>

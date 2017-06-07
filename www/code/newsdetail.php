@@ -157,7 +157,7 @@
               </div>
             </div>
                       <?php
-            $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+            $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
             
             if(isset($_POST['name'], $_POST['message'])){
 

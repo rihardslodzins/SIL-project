@@ -1,7 +1,7 @@
 <?php
 // This function show the latest news record from Database
 function showLatestNews(){
-    $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
             $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             $db->exec("SET NAMES 'utf8'");
             $results = $db->query("SELECT * FROM news WHERE news_id = (SELECT MAX(news_id) FROM news)");
@@ -25,7 +25,7 @@ function showLatestNews(){
 function showAllNews(){
                    
                   try {
-                    $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  
@@ -71,7 +71,7 @@ function showDetailedNews(){
                 
                  $news_id = $_GET['id'];
                   try {
-                    $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  
@@ -116,7 +116,7 @@ function showDetailedNews(){
 function listNews (){
   $news_id = $_GET['id'];
                   try {
-                    $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  
