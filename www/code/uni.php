@@ -1,6 +1,7 @@
 <?php
+// Displaying all universities
 function showAllUnis(){
-                $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
+                $db = new PDO("mysql:host=db;dbname=sildb","root","root");
             $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             $db->exec("SET NAMES 'utf8'");
             $results = $db->query("SELECT * FROM uni");
@@ -21,10 +22,11 @@ function showAllUnis(){
                 $_SESSION['event_id'] = $news_id;
             }
 }
+// Displaying names of all universites
 function listUnis(){
                     $event_id = $_GET['id'];
                   try {
-                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
+                    $db = new PDO("mysql:host=db;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  
@@ -50,12 +52,13 @@ function listUnis(){
    ';
  }
 }
+//Showing a detailed descripton of university
 function showDetailedUni(){
                    
                 
                  $uni_id = $_GET['id'];
                   try {
-                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
+                    $db = new PDO("mysql:host=db;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  

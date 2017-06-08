@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>SIL</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,10 +10,10 @@
   <link rel="stylesheet" type="text/css" href="\css\detail.css">
 </head>
 <body>
+<!-- Nav bar -->
 <div class="navbar-wrapper">
   <div class="container">
     <div class="navbar navbar-inverse navbar-static-top">
-      
         <div class="navbar-header">
 	    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	      <span class="icon-bar"></span>
@@ -32,12 +32,11 @@
             <li><a href="contactus.php">Contact us</a></li>
           </ul>
         </div>
-
     </div>
   </div><!-- /container -->
 </div>
+<!-- Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -73,9 +72,8 @@
     </div>
   </div>
 </div>
-
-<div class="container" id="mycontainer">
-    
+<!-- Middle container showing all universities -->
+<div class="container" id="mycontainer">   
     <h1 class="heading">Universities in Latvia</h1>
     <hr>
     <div class="row">
@@ -89,8 +87,9 @@
         </div>
     </div>
 </div>
+<!-- Footer -->
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <a href="rihardslodzins@gmail.com">info@studyinlatvia.com</a>
 </footer>
 </body>
 </html>

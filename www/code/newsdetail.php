@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>News</title>
+  <title>SIL</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,10 +10,10 @@
   <link rel="stylesheet" type="text/css" href="\css\detail.css">
 </head>
 <body>
+<!-- My Nav bar -->
 <div class="navbar-wrapper">
   <div class="container">
     <div class="navbar navbar-inverse navbar-static-top">
-      
         <div class="navbar-header">
 	    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	      <span class="icon-bar"></span>
@@ -35,10 +34,10 @@
         </div>
 
     </div>
-  </div><!-- /container -->
+  </div>
 </div>
+<!-- Corousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -73,8 +72,7 @@
       </div>
     </div>
   </div>
- 
-  <!-- Controls -->
+  <!-- Carousel controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
     <i class="glyphicon glyphicon-chevron-left"></i>
   </a>
@@ -82,11 +80,9 @@
     <i class="glyphicon glyphicon-chevron-right"></i>
   </a>  
 </div>
- <!-- Page Content -->
+<!-- display new detailed -->
 <div class="container">
-
         <div class="row">
-
             <div class="col-md-3">
                 <p class="lead">Other articles</p>
                 <div class="list-group">
@@ -96,90 +92,76 @@
                   ?>
                 </div>
             </div>
-
             <div class="col-md-9">
-
                 <?php
                 require_once('news.php');
                 showDetailedNews();
                 ?>
                  <div class="well">
-                
                 <?php
                 require_once('news.php');
                 showComments();
                 ?>
-                
-
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-    <!-- /.container -->
+<!-- Input form for comments -->
     <div class="container">
 	<div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="well well-sm">
           <form class="form-horizontal" action="" method="POST">
           <fieldset>
-            <!-- Name input-->
+            <!-- Commentators name-->
             <div class="form-group">
               <label class="col-md-3 control-label" for="name">Name</label>
               <div class="col-md-9">
                 <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
               </div>
             </div>
-    
-            <!-- Email input-->
+            <!-- Commentators email-->
             <div class="form-group">
               <label class="col-md-3 control-label" for="email">Your E-mail</label>
               <div class="col-md-9">
                 <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
               </div>
             </div>
-    
-            <!-- Message body -->
+            <!-- Comment section -->
             <div class="form-group">
               <label class="col-md-3 control-label" for="message">Your message</label>
               <div class="col-md-9">
                 <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
               </div>
             </div>
-    
-            <!-- Form actions -->
+            <!-- Comment button -->
             <div class="form-group">
               <div class="col-md-12 text-right">
                 <button type="submit" class="btn btn-primary btn-lg">Comment</button>
               </div>
             </div>
-                      <?php
-            $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
-            
-            if(isset($_POST['name'], $_POST['message'])){
-
-
-    $stmt = $db->prepare("INSERT INTO comments (cm_name, cm_email, comment, comment_id) values(:name, :email, :message, :id)");
-            $stmt->bindParam(':name', $_POST['name']);
-            $stmt->bindParam(':email', $_POST['email']);
+<!-- inserting comment into database -->
+      <?php
+        $db = new PDO("mysql:host=db;dbname=sildb","root","root");
+        if(isset($_POST['name'], $_POST['message'])){
+        $stmt = $db->prepare("INSERT INTO comments (cm_name, cm_email, comment, comment_id) values(:name, :email, :message, :id)");
+        $stmt->bindParam(':name', $_POST['name']);
+        $stmt->bindParam(':email', $_POST['email']);
         $stmt->bindParam(':message', $_POST['message']);
         $stmt->bindParam(':id', $id);
         $id =  $_GET['id'];
         $stmt->execute();
-
-
-}
-            
-          ?>
+        }   
+      ?>
           </fieldset>
-
           </form>
         </div>
       </div>
 	</div>
 </div>
+<!-- Footer with link -->
+<footer class="container-fluid text-center">
+  <a href="rihardslodzins@gmail.com">info@studyinlatvia.com</a>
+</footer>
  </body>
 </html>

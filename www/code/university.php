@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +10,10 @@
   <link rel="stylesheet" type="text/css" href="\css\detail.css">
 </head>
 <body>
+<!-- Nav bar -->
 <div class="navbar-wrapper">
   <div class="container">
     <div class="navbar navbar-inverse navbar-static-top">
-      
         <div class="navbar-header">
 	    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	      <span class="icon-bar"></span>
@@ -33,10 +32,10 @@
             <li><a href="contactus.php">Contact us</a></li>
           </ul>
         </div>
-
     </div>
-  </div><!-- /container -->
+  </div>
 </div>
+<!-- Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -73,8 +72,7 @@
       </div>
     </div>
   </div>
- 
-  <!-- Controls -->
+  <!-- Controls for carousel -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
     <i class="glyphicon glyphicon-chevron-left"></i>
   </a>
@@ -82,11 +80,9 @@
     <i class="glyphicon glyphicon-chevron-right"></i>
   </a>  
 </div>
- <!-- Page Content -->
+ <!-- Middle container Uni list -->
 <div class="container">
-
         <div class="row">
-
             <div class="col-md-3">
                 <p class="lead">Universities</p>
                 <div class="list-group">
@@ -96,32 +92,23 @@
                   ?>
                 </div>
             </div>
-
             <div class="col-md-9">
-
                 <?php
                 require_once('uni.php');
                 showDetailedUni();
                 ?>
                  <div class="well">
-                
-
-                
-
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-    
-
-          
         </div>
       </div>
 	</div>
 </div>
+<!-- Footer -->
+<footer class="container-fluid text-center">
+  <a href="rihardslodzins@gmail.com">info@studyinlatvia.com</a>
+</footer>
  </body>
 </html>

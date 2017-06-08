@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>SIL</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,10 +10,10 @@
   <link rel="stylesheet" type="text/css" href="\css\tr.css">
 </head>
 <body>
+<!-- Nav bar -->
 <div class="navbar-wrapper">
   <div class="container">
-    <div class="navbar navbar-inverse navbar-static-top">
-      
+    <div class="navbar navbar-inverse navbar-static-top">  
         <div class="navbar-header">
 	    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	      <span class="icon-bar"></span>
@@ -32,12 +32,11 @@
             <li><a href="contactus.php">Contact us</a></li>
           </ul>
         </div>
-
     </div>
   </div><!-- /container -->
 </div>
+<!-- Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -72,6 +71,7 @@
       </div>
     </div>
   </div>
+<!-- Article about Tax -->
 <article>
         <div class="container">
             <div class="row">
@@ -79,16 +79,19 @@
                     <h1> Taxation in Latvia </h1>
                     <p>The Ministry of Finance shall develop state tax and customs policy, as well as prepare recommendations for institutions responsible for tax and customs administration on implementation of tax and customs policy activities.
 
-Taxes and fees system in Latvia consists of:
+                    Taxes and fees system in Latvia consists of:
 
-state taxes, object and rate of which shall be set by the Saeima;
-state fees which shall be applicable according to Law "On Taxes and Fees" (LV) specific other laws and regulations of the Cabinet of Ministers;
-local government fees which shall be applicable according to Law "On Taxes and Fees" (LV) and binding regulations issued by the council of local government;
-directly applicable taxes and other obligatory payments set in the European Union regulatory enactments.</p>
+                    state taxes, object and rate of which shall be set by the Saeima;
+                    state fees which shall be applicable according to Law "On Taxes and Fees" (LV) specific other laws and regulations of the Cabinet of Ministers;
+                    local government fees which shall be applicable according to Law "On Taxes and Fees" (LV) and binding regulations issued by the council of local government;
+                    directly applicable taxes and other obligatory payments set in the European Union regulatory enactments.</p>
                 </div>
             </div>
         </div>
     </article>
-
+<!-- Footer -->
+<footer class="container-fluid text-center">
+  <a href="rihardslodzins@gmail.com">info@studyinlatvia.com</a>
+</footer>
 </body>
 </html>

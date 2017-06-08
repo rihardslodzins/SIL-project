@@ -1,7 +1,4 @@
-<?php
-session_start();
-setcookie("PHPSESSID","", time()-3600 );
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

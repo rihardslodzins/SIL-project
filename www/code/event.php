@@ -1,6 +1,7 @@
 <?php
+// Shows all events - picture, name, date
 function showAllEvents(){
-            $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
+            $db = new PDO("mysql:host=db;dbname=sildb","root","root");
             $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             $db->exec("SET NAMES 'utf8'");
             $results = $db->query("SELECT * FROM events");
@@ -22,11 +23,11 @@ function showAllEvents(){
                 $_SESSION['event_id'] = $news_id;
             }
 }
-
+// Displays all events titles 
 function listEvents(){
                     $event_id = $_GET['id'];
                   try {
-                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
+                    $db = new PDO("mysql:host=db;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  
@@ -52,13 +53,13 @@ function listEvents(){
    ';
  }
 }
-
+// Displays a specific event in detail - picture, date, name, description
 function showDetailedEvent(){
                    
                 
                  $event_id = $_GET['id'];
                   try {
-                    $db = new PDO("mysql:host=172.17.0.1:9097;dbname=sildb","root","root");
+                    $db = new PDO("mysql:host=db;dbname=sildb","root","root");
                     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     $db->exec("SET NAMES 'utf8'");
                   } catch (Exception $e) {  
@@ -96,9 +97,10 @@ function showDetailedEvent(){
 
               }
 }
+// Displays all comments for a specific event 
  function showComments(){
               $event_id = $_GET['id'];
-             $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+             $db = new PDO("mysql:host=db;dbname=sildb","rihards1","rihards123");
              $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
              $comments = $db->query("SELECT * FROM comment_ev WHERE comment_id =".$event_id.""); 
              $comments = $comments->fetchAll(PDO::FETCH_ASSOC);
