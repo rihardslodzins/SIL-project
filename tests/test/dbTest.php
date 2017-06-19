@@ -1,25 +1,17 @@
 <?php
 use PHPUnit\Framework\TestCase; 
-abstract class dbTest extends TestCase
-{
-static private $pdo= null;
-private $conn = null;
-private $rih = null;
-final public function getConnection()
-{
-    if ($this->conn === null)
-    {
-        if (self::$pdo == null)
-        {
-            self::$pdo = new PDO( $GLOBALS['DB_DSN'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASSWD'] );
+class FixtureTestCase extends PHPUnit_Extensions_Database_TestsCase {
+    private $conn = null;
+
+    public function getConnection(){
+        if ($this->conn === null){
+            try {
+                $pdo = new PDO('mysql:host=db;dbname=sildb','root','root');
+                $this->conn = $this->createDefaultDBConnection($pdo, 'sildb');
+            }catch (PDOException $e){
+                echo $e->getMessage();
+            }
         }
-        $this->conn = $this->createDefaultDBConnection(self::$pdo, $GLOBALS['DB_DBNAME']);
+        return $this->conn;
     }
-    return $this->conn;
 }
-protected function getPdo()
-{
-    return $this->getConnection()->getConnection();
-}
-}
-?>
