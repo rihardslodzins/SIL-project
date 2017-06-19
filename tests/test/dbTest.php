@@ -1,6 +1,11 @@
 <?php
 use PHPUnit\Framework\TestCase; 
 class FixtureTestCase extends \PHPUnit_Extensions_Database_TestCase {
+    public $fixtures = array(
+        'posts',
+        'postmeta',
+        'options'
+    );
     private $conn = null;
 
      public function getConnection(){
@@ -14,4 +19,19 @@ class FixtureTestCase extends \PHPUnit_Extensions_Database_TestCase {
         }
         return $this->conn;
     }
+    public function getDataSet($fixtures = array()) {
+    if (empty($fixtures)) {
+        $fixtures = $this->fixtures;
+    }
+    $compositeDs = new
+    PHPUnit_Extensions_Database_DataSet_CompositeDataSet(array());
+    $fixturePath = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'fixtures';
+
+    foreach ($fixtures as $fixture) {
+        $path =  $fixturePath . DIRECTORY_SEPARATOR . "$fixture.xml";
+        $ds = $this->createMySQLXMLDataSet($path);
+        $compositeDs->addDataSet($ds);
+    }
+    return $compositeDs;
+}
 }
