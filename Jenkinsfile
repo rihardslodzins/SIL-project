@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage("Run containers"){
             steps{
-                sh "runme.sh"
+                sh "docker-compose up -d"
             }
         }
     }
