@@ -19,6 +19,7 @@ class FixtureTestCase extends \PHPUnit_Extensions_Database_TestCase {
         }
         return $this->conn;
     }
+    
     public function getDataSet($fixtures = array()) {
     if (empty($fixtures)) {
         $fixtures = $this->fixtures;
