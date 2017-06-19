@@ -3,7 +3,7 @@ use PHPUnit\Framework\TestCase;
 class FixtureTestCase extends \PHPUnit_Extensions_Database_TestCase {
     private $conn = null;
 
-    public function getConnection(){
+     function getConnection(){
         if ($this->conn === null){
             try {
                 $pdo = new PDO('mysql:host=db;dbname=sildb','root','root');
