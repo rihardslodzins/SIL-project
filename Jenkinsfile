@@ -13,7 +13,7 @@ pipeline {
         }
         stage ('Test db connection'){
             steps{
-                sh "./tests/phpunit"
+                sh "phpunit --log-junit results/phpunit/phpunit.xml -c tests/phpunit.xml"
             }
         }
     }
