@@ -1,6 +1,6 @@
 pipeline {  
     agent{
-        docker 'node'
+        docker 'node:6.0'
     }
     stages {
         stage("Run containers"){
