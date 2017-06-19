@@ -13,11 +13,12 @@ node("docker") {
         stage "publish"
         app.push 'master'
         app.push "${commit_id}"
+
     }
 }
 
 
 sdfsd
-
+asds
 
 sdfjjjsd nsdfhhjsd sadljdfgo sdkosdgo sdf
