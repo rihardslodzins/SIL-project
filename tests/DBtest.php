@@ -7,6 +7,7 @@ abstract class DB_Connection_Test extends TestCase
 
 static private $pdo= null;
 private $conn = null;
+private $rih = null;
 
 
 final public function getConnection()
