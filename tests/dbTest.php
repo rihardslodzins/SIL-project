@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase; 
-abstract class DB_Connection_Test extends TestCase
+abstract class dbTest extends TestCase
 {
 static private $pdo= null;
 private $conn = null;
