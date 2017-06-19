@@ -20,7 +20,7 @@
 	      <span class="icon-bar"></span>
 	      <span class="icon-bar"></span>
 	    </a>
-        <a class="navbar-brand" href="#">Study in Latvia</a>
+        <a class="navbar-brand" href="#">Study In Latvia</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
