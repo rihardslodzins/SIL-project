@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase; 
-class FixtureTestCase extends PHPUnit_Extensions_Database_TestsCase {
+class FixtureTestCase extends \PHPUnit_Extensions_Database_TestCase {
     private $conn = null;
 
     public function getConnection(){
