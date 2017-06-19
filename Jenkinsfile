@@ -1,12 +1,31 @@
-pipeline {  
-    agent{
-        docker 'node:6.0'
+pipeline {
+    agent {
+        node{
+            label 'docker'
+        }
     }
-    stages {
-        stage("Run containers"){
+    tools{
+        nodejs 'nodejs'
+    }
+    stages{
+        stage('Checkout Code'){
             steps{
-                sh "docker-compose up -d"
+                checkout scm
             }
+        }
+    
+        stage('Verify Tools'){
+            steps{
+                parallel (
+                    node: {sh "npm -v"},
+                    docker: {sh "docker -v"}
+                )
+            }
+        }
+        stage ('Build Container'){
+            steps {
+                sh "docker-compose up -d"
+            } 
         }
     }
 }
