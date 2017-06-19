@@ -79,7 +79,7 @@
                     state taxes, object and rate of which shall be set by the Saeima;
                     state fees which shall be applicable according to Law "On Taxes and Fees" (LV) specific other laws and regulations of the Cabinet of Ministers;
                     local government fees which shall be applicable according to Law "On Taxes and Fees" (LV) and binding regulations issued by the council of local government;
-                    directly applicable taxes and other obligatory payments set in the European Union regulatory enactments.</p>
+                    directly applicablle taxes and other obligatory payments set in the European Union regulatory enactments.</p>
                 </div>
             </div>
         </div>
