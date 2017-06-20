@@ -20,8 +20,7 @@ pipeline {
         stage ('Push php image to Docker hub'){
             steps{
                 sh "docker commit c503fd8ec2f5 rihardslodzins/phpapp"
-                sh "docker login --username=rihardslodzins --email=rihardslodzins@gmail.com"
-                sh "Stulbieodi123"
+                sh "docker login --username=rihardslodzins --email=rihardslodzins@gmail.com --password=Stulbieodi123"
                 sh "docker push rihardslodzins/myapp"
             }
         }
