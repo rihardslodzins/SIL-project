@@ -17,5 +17,15 @@ pipeline {
                 sh "phpunit --log-junit results/phpunit/phpunit.xml -c tests/phpunit.xml"
             }
         }
+        stage ('Push php image to Docker hub'){
+            steps{
+                sh "docker commit c503fd8ec2f5 rihardslodzins/phpapp"
+                sh "docker run -it rihardslodzins/myapp"
+                sh "docker login --username=rihardslodzins --email=rihardslodzins@gmail.com"
+                sh "Stulbieodi123"
+                sh "docker push rihardslodzins/myapp"
+            }
+        }
+        
     }
 }
