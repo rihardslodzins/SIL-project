@@ -18,8 +18,8 @@ function showAllUnis(){
                     </div>
                     </li>
               ';
-              $event_id=  $result['event_id'];
-                $_SESSION['event_id'] = $news_id;
+              $uni_id=  $result['uni_id'];
+                $_SESSION['uni_id'] = $news_id;
             }
 }
 // Displaying names of all universites

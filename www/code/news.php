@@ -143,7 +143,7 @@ function listNews (){
 
  function showComments(){
               $news_id = $_GET['id'];
-             $db = new PDO("mysql:host=127.0.0.1:8889;dbname=sildb","rihards1","rihards123");
+             $db = new PDO("mysql:host=db;dbname=sildb","root","root");
              $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
              $comments = $db->query("SELECT * FROM comments WHERE comment_id =".$news_id.""); 
              $comments = $comments->fetchAll(PDO::FETCH_ASSOC);

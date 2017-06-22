@@ -100,7 +100,7 @@ function showDetailedEvent(){
 // Displays all comments for a specific event 
  function showComments(){
               $event_id = $_GET['id'];
-             $db = new PDO("mysql:host=db;dbname=sildb","rihards1","rihards123");
+             $db = new PDO("mysql:host=db;dbname=sildb","root","root");
              $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
              $comments = $db->query("SELECT * FROM comment_ev WHERE comment_id =".$event_id.""); 
              $comments = $comments->fetchAll(PDO::FETCH_ASSOC);
