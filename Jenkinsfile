@@ -8,7 +8,10 @@ pipeline {
         }
         stage ('Build Container'){
             steps {
-
+                sh "docker stop slodzinssilprojectmasterannlcctvvwgxsbaz2ju65szboijkzjci34v4rbv4bjfukgmrveuq_php_1"
+                sh "docker rm slodzinssilprojectmasterannlcctvvwgxsbaz2ju65szboijkzjci34v4rbv4bjfukgmrveuq_php_1"
+                sh "docker rmi slodzinssilprojectmasterannlcctvvwgxsbaz2ju65szboijkzjci34v4rbv4bjfukgmrveuq_php -f"
+                sh "docker rmi rihardslodzins/phpapp -f"
                 sh "docker-compose up -d"
             } 
         }
