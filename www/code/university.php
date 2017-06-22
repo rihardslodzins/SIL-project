@@ -100,9 +100,9 @@
       </div>
 	</div>
 </div>
-<!-- Footer -->
+ </body>
+ <!-- Footer -->
 <footer class="container-fluid text-center">
   <a href="rihardslodzins@gmail.com">info@studyinlatvia.com</a>
 </footer>
- </body>
 </html>
